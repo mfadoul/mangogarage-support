@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mango Garage privacy information for its local-first app and optional Cloud Assist feature.">
+  <title>Privacy Policy — Mango Garage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page">
+    <header>
+      <a class="brand" href="index.html" aria-label="Mango Garage support home">
+        <span class="brand-mark" aria-hidden="true">▰</span><span>Mango Garage</span>
+      </a>
+      <nav aria-label="Support navigation">
+        <a href="help.html">Using the app</a>
+        <a href="index.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Delete Cloud Assist account</a>
+        <a href="export-and-import.html">Export and import</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: November 11, 2026 · Release-review draft</p>
+
+      <aside class="notice" aria-label="Draft notice">
+        <p><strong>Not yet a public-release policy.</strong> Mango Garage is in private development testing. This document describes the intended current behavior, but it must receive final provider, retention, App Store disclosure, and legal review before the public release. The public version will retain this URL and show its effective date.</p>
+      </aside>
+
+      <h2>Overview</h2>
+      <p>Mango Garage is a local-first vehicle recordkeeping app provided by Matthew Fadoul. It lets you record vehicle, fuel, maintenance, tire-pressure, reminder, and related photo information on your device. Ordinary recordkeeping and manual fuel entry work without a Mango Garage account.</p>
+      <p>Cloud Assist is optional. When you choose it, it analyzes a selected fuel-event photo set and returns suggestions for you to review. It does not automatically save a fuel event. Cloud Assist requires you to choose Continue with Apple.</p>
+
+      <h2>Information stored on your device</h2>
+      <p>The app stores vehicle profiles and settings; fuel, maintenance, and tire-pressure records; values you enter or approve; notes; dates; reminder preferences; and photos you add to an event. It may also store optional photo-location information that you choose to use.</p>
+      <p>You control when to export a ZIP backup or fuel spreadsheet and where to share it. A ZIP backup can include record data and event photos. A fuel spreadsheet contains fuel values and calculations, but not photos or Cloud Assist credentials. Optional retained original images use a device-local encryption key and are not part of the normal ZIP backup.</p>
+      <p>For the Car Status widget, the app keeps a short summary of each active car (its nickname, latest fuel economy, and tire status) and a small copy of its main photo in a storage area on your device that only Mango Garage and its own widgets can read. It is not sent anywhere. A widget you place on the Home Screen or Lock Screen can be seen by anyone who can see your device.</p>
+
+      <h2 id="cloud-assist">Optional Cloud Assist</h2>
+      <p>If you choose Cloud Assist, Mango Garage asks for your confirmation and then sends resized copies of the selected fuel-event photos to the Mango Garage service, which uses Google's Gemini AI to read them. The service returns possible fuel values for you to review.</p>
+      <p>The Cloud Assist upload does not include the original photo files or your phone's current location. Photo coordinates can be used separately on your device with Apple Maps to rank nearby stations when you allow location use; they are not included in the Gemini request. Selected photos can still visibly contain personal information, payment fragments, license plates, faces, or location clues. Review photos before sending and do not include information that is unnecessary for fuel analysis.</p>
+      <p>Cloud Assist asks you to sign in with Apple, which creates a Mango Garage account through Google's Firebase. The account keeps track of your introductory scans and any future purchases. Mango Garage does not ask for your Apple Account name or email address for this.</p>
+      <p>The service keeps an account record with your account identifier and how many scans you have used, plus limited service logs that do not contain your photos. Photos are not stored. So that retrying a scan does not use another one, the values a scan returned (such as station, address, date, odometer, and purchase amounts) are kept for about a day, without the photos.</p>
+
+      <h2 id="weather-and-places">Weather and nearby-place lookups</h2>
+      <p>When you tap the weather button in a tire-pressure, fuel, or maintenance entry, or search for nearby stations, Mango Garage asks Apple for that information: Apple WeatherKit for temperature and air pressure, and Apple Maps for nearby places. These requests include the location being looked up, which is your device's current location or, for a tire-pressure check, the location of a photo you added when you allow photo locations. For a photo taken with the camera inside Mango Garage, that is where your device was when you took it, recorded only when photo locations and location access are already allowed. A weather lookup for a check recorded at an earlier time also includes that date and time.</p>
+      <p>If you turn on <strong>Weather reminders for tire pressure</strong> in Settings (off by default), the app also asks Apple WeatherKit for the temperature at your approximate location when you open it, at most once every six hours and only after a tire check has recorded a temperature, to tell you when the weather has changed enough to affect tire pressure. It never does this in the background, and it does not ask for location access on its own.</p>
+      <p>These lookups go directly from your device to Apple and are handled under Apple's privacy policy. They are not sent to the Mango Garage backend or to Google. The temperature and air pressure that come back are stored only with your record on your device, and screens that show them credit Apple Weather.</p>
+
+      <h2>Why information is used</h2>
+      <p>Local information is used to provide recordkeeping, calculations, charts, reminders, backup, export, and import. Cloud Assist information is used only to provide and protect the requested analysis, enforce reasonable-use limits, prevent abuse, operate the service, and investigate reliability or security problems.</p>
+      <p>Mango Garage does not sell personal information. It does not use fuel photos to train a model unless a future version offers a separate, clearly described opt-in program.</p>
+      <p>Your confirmation authorizes the particular Cloud Assist upload shown in the app. It does not authorize advertising, sale of your information, unrelated model training, or automatic upload of other photos. You can decline and enter the fuel event manually.</p>
+
+      <h2>Service providers</h2>
+      <ul>
+        <li><strong>Google</strong> (Gemini AI and Firebase) processes Cloud Assist photos, sign-in, and account records, in the United States.</li>
+        <li><strong>Apple</strong> provides Sign in with Apple, weather, and nearby places.</li>
+      </ul>
+      <p>These providers handle information only to provide the features described here. Mango Garage will keep this list current and confirm it before public release.</p>
+
+      <h2>Retention and deletion</h2>
+      <p>Local app data remains on your device until you delete it, delete the app, or restore or replace it using a backup you control. The app provides a separately confirmed <strong>Delete Local Mango Garage Data</strong> action in Settings to remove on-device vehicle records, photos, and retained originals while leaving app preferences and Cloud Assist access unchanged. Deleting the app does not itself guarantee deletion of an optional Cloud Assist account record.</p>
+      <p>Before public release, Mango Garage will publish how long each kind of Cloud Assist record is kept. Deleting your Cloud Assist account from the app is not available yet; see <a href="delete-account.html">Delete Cloud Assist account</a> for what it will do.</p>
+
+      <h2>Your choices and contact</h2>
+      <p>You may use manual recordkeeping without Cloud Assist. You can choose whether to add widgets, attach photos, use precise location for nearby search, look up weather or let photo locations be used for it, retain original images locally, share an export, or sign in with Apple for Cloud Assist.</p>
+      <p>For privacy questions during private testing, contact <a href="mailto:papayamedley.app@gmail.com?subject=Mango%20Garage%20Privacy">papayamedley.app@gmail.com</a>. Do not send photos, credentials, tokens, or raw account identifiers by email. The final public policy will identify the applicable privacy-contact and request-verification process.</p>
+    </main>
+
+    <footer>
+      <p>© 2026 Matthew Fadoul · <a href="index.html">Support</a> · <a href="terms.html">Terms</a> · <a href="delete-account.html">Account deletion</a></p>
+    </footer>
+  </div>
+</body>
+</html>

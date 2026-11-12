@@ -1,0 +1,204 @@
+:root {
+  color-scheme: light dark;
+  --canvas: #fff8f1;
+  --surface: #ffffff;
+  --surface-raised: #f6e8d6;
+  --ink: #26160c;
+  --secondary-ink: #5d4b3d;
+  --action: #a63c0b;
+  --action-foreground: #ffffff;
+  --outline: #d8bfa6;
+  --notice: #fff1d8;
+  --notice-outline: #d77a12;
+  --success: #186b42;
+  --max-width: 46rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #17100a;
+    --surface: #251a11;
+    --surface-raised: #332316;
+    --ink: #fff7ed;
+    --secondary-ink: #d9c6b5;
+    --action: #ff9b4a;
+    --action-foreground: #241008;
+    --outline: #604832;
+    --notice: #3b2611;
+    --notice-outline: #ffae55;
+    --success: #83d7a5;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--canvas); }
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--action);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:hover { text-decoration-thickness: 0.14em; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 0.2rem solid var(--ink);
+  outline-offset: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.skip-link {
+  position: fixed;
+  top: -4rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.65rem 0.9rem;
+  background: var(--ink);
+  color: var(--canvas);
+}
+
+.skip-link:focus { top: 1rem; }
+
+.page {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+}
+
+header {
+  padding: 2.25rem 0 1.25rem;
+  border-bottom: 1px solid var(--outline);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--outline);
+  border-radius: 0.65rem;
+  background: var(--surface-raised);
+  color: var(--action);
+  font-size: 1.12rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 1rem;
+}
+
+nav a { font-size: 0.94rem; }
+
+main { padding: 2.4rem 0 3rem; }
+
+h1, h2, h3 { color: var(--ink); line-height: 1.2; }
+h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 9vw, 3.1rem); letter-spacing: -0.04em; }
+h2 { margin: 2.5rem 0 0.7rem; font-size: 1.35rem; letter-spacing: -0.02em; }
+h3 { margin: 1.55rem 0 0.45rem; font-size: 1.07rem; }
+p, li { max-width: 70ch; }
+ul, ol { padding-left: 1.25rem; }
+
+.lede { color: var(--secondary-ink); font-size: 1.14rem; }
+
+.card,
+.notice {
+  margin: 1.4rem 0;
+  padding: 1.2rem;
+  border: 1px solid var(--outline);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.notice {
+  border-left: 0.35rem solid var(--notice-outline);
+  background: var(--notice);
+}
+
+.notice p:first-child,
+.card p:first-child { margin-top: 0; }
+.notice p:last-child,
+.card p:last-child { margin-bottom: 0; }
+
+.card-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  margin-top: 1.2rem;
+}
+
+.card h2 { margin-top: 0; font-size: 1.13rem; }
+
+.button {
+  display: inline-block;
+  margin: 0.2rem 0.4rem 0.2rem 0;
+  padding: 0.65rem 0.95rem;
+  border-radius: 0.65rem;
+  background: var(--action);
+  color: var(--action-foreground);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.secondary {
+  border: 1px solid var(--outline);
+  background: transparent;
+  color: var(--ink);
+}
+
+.meta { color: var(--secondary-ink); font-size: 0.92rem; }
+
+.checklist { list-style: "✓  "; }
+.checklist li { padding-left: 0.2rem; }
+
+.status-good { color: var(--success); font-weight: 700; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  overflow: hidden;
+  border: 1px solid var(--outline);
+  border-radius: 0.75rem;
+}
+
+th, td { padding: 0.75rem; border-bottom: 1px solid var(--outline); text-align: left; vertical-align: top; }
+th { background: var(--surface-raised); }
+tr:last-child td { border-bottom: 0; }
+
+footer {
+  padding: 1.7rem 0 2.8rem;
+  border-top: 1px solid var(--outline);
+  color: var(--secondary-ink);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 34rem) {
+  .page { width: min(calc(100% - 1.4rem), var(--max-width)); }
+  header { padding-top: 1.5rem; }
+  main { padding-top: 1.8rem; }
+  th, td { padding: 0.6rem; }
+}

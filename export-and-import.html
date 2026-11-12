@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mango Garage backup, fuel-spreadsheet export, and import guidance.">
+  <title>Export and Import — Mango Garage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page">
+    <header>
+      <a class="brand" href="index.html" aria-label="Mango Garage support home">
+        <span class="brand-mark" aria-hidden="true">▰</span><span>Mango Garage</span>
+      </a>
+      <nav aria-label="Support navigation">
+        <a href="help.html">Using the app</a>
+        <a href="index.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Delete Cloud Assist account</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1>Export, backup, and import</h1>
+      <p class="lede">Mango Garage gives you two different portability tools: a complete local archive for backup and restore, and a fuel spreadsheet for analysis or a guided one-time migration.</p>
+
+      <h2>Choose the right file</h2>
+      <table>
+        <thead><tr><th scope="col">Need</th><th scope="col">Use</th><th scope="col">Important limit</th></tr></thead>
+        <tbody>
+          <tr><td>Complete local backup or restore</td><td>Versioned ZIP archive</td><td>The only intended full round trip; it can retain relationships, photos, and other local record data.</td></tr>
+          <tr><td>Fuel-history analysis in a spreadsheet</td><td>CSV or XLSX export</td><td>Contains ordinary fuel values and calculations, not event photos or Cloud Assist credentials.</td></tr>
+          <tr><td>Bring an existing fuel table into one vehicle</td><td>Guided CSV, XLSX, or ODS import</td><td>Imports selected raw values after preview; it does not import formulas, charts, photos, or arbitrary columns.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Fuel spreadsheet export</h2>
+      <p>Settings can create a UTF-8 CSV or an XLSX workbook. Both contain selected source values, normalized values, derived calculation status, and MPG parity checks. XLSX adds filters, a frozen header row, and formula-based checks that make the workbook easier to inspect in common spreadsheet apps.</p>
+      <p>A blank calculated MPG means the record interval is not eligible for that calculation; it does not mean zero MPG. The app exports a spreadsheet for portability and review, not as a live two-way synchronization system.</p>
+
+      <h2>Guided spreadsheet import</h2>
+      <ol>
+        <li>Choose the destination vehicle.</li>
+        <li>Choose a CSV, XLSX, or ODS file and review recognized columns or suggested mappings.</li>
+        <li>Confirm units and preview ready and skipped rows.</li>
+        <li>Import only the selected raw values.</li>
+      </ol>
+      <p>Duplicate records are skipped rather than overwritten. Mango Garage recomputes its own derived values after import so an edited spreadsheet formula does not become authoritative vehicle data.</p>
+
+      <h2>Current limits</h2>
+      <ul>
+        <li>Import reads CSV files and the first worksheet of an XLSX or ODS workbook. If a workbook cannot be read, export its first worksheet as CSV and try again.</li>
+        <li>A spreadsheet does not restore all Mango Garage record types and is not a replacement for a ZIP archive.</li>
+        <li>Spreadsheet export does not include event photos, Apple account information, or Cloud Assist sign-in details.</li>
+        <li>Always verify a newly created backup or export in the destination you chose before relying on it.</li>
+      </ul>
+
+      <h2>Get help</h2>
+      <p>For a non-sensitive export or import question, contact <a href="mailto:papayamedley.app@gmail.com?subject=Mango%20Garage%20Export%20or%20Import">papayamedley.app@gmail.com</a>. Do not attach vehicle photos, backups, or account credentials unless a future support process specifically asks you to do so through a secure channel.</p>
+    </main>
+
+    <footer>
+      <p>© 2026 Matthew Fadoul · <a href="index.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    </footer>
+  </div>
+</body>
+</html>
